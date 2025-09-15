@@ -5,6 +5,9 @@
 }
 
 :root {
+    /* padding for Centering container items */
+    --pd-:padding: 0 80px;
+    
     /* ====== Colors ====== */
     --primary-color: #e43636;
     --primary-color2: rgba(228, 54, 54, 0.3);
@@ -39,178 +42,71 @@
     --spacing-5xl: 5.5em;
 }
 
+/* Universals */
+.btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
 /* Utility */
 body {
-    max-width: 1200px;
-    width: 85%;
-    margin: 0 auto;
+    width: 100%;
     height: 100vh;
     font-family: 'Mavin Pro', sans-serif;
-    background-color: var(--neutral-color);
-    line-height: 1.6;
-    padding-top: 85px;
 }
 
-img {
+#wrapper {
+    background-color: #0f182e;
     width: 100%;
-    height: auto;
+    padding: 0 80px;
 }
 
-.btn {
-    border: none;
-    font-size: var(--text-base);
-    padding: var(--spacing-xs);
-    background-color: var(--secondary-light);
-}
-
-.btn:hover {
-    cursor: pointer;
-}
-
-
-/* Header Section */
-.header {
-    width: 100%;
-    height: 50px;
-    margin: 0 auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    background-color: var(--text-color2-blvck);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-container {
-    width: 85%;
-    margin: 0 auto;
+.hero-section > header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    padding-top: var(--spacing-2xl);
 }
 
-/* Logo Styles */
-.logo a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: var(--text-lg);
-    font-weight: 700;
-}
-
-.logo a:hover {
-    cursor: pointer;
-}
-
-/* Navigation Styles */
-.nav-menu  {
+.navbar ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: var(--spacing-lg);
+    gap: 50px;
 }
 
-.nav-menu li {
-    list-style-type: none;
+.navbar li {
+    list-style: none;
 }
 
-.nav-menu a {
+.navbar a {
     text-decoration: none;
+    color: gainsboro;
+    font-weight: 600;
     font-size: var(--text-lg);
-    font-weight: 700;
-    color: var(--text-color-white);
 }
 
-.nav-menu a:hover {
-    border-bottom: 2px solid var(--primary-color);
-    transition: all ease-in 0.2s;
-    cursor: pointer;
+.brand a {
+    color: gainsboro;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-/* CTA Button */
-.btn-primary {
-    color: var(--text-color-white);
-    font-weight: 700;
-    background-color: var(--primary-color);
-}
-
-/* Hero Section Styles */
-.hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(Images/main.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: var(--text-3xl)
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    gap: var(--spacing-lg);
-
-}
-
-.hero-content .hero-buttons > button {
-    margin-left: var(--spacing-sm);
-    color: var(--text-color-blvck);
-    font-weight: 550;
-}
-
-.hero-content .hero-buttons > button:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color-white);
-    width: 150px;
-    transition: width 0.7s linear 0.3s;
-}
-
-.hero-text h1 {
-    text-align: center;
-    color: var(--text-color-white);
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 800;
-}
-
-.hero-text p {
-    text-align: center;
-    color: var(--text-color-white);
-    font-family: 'Mavin Pro', sans-serif;
-    font-weight: 300;
-}
-
-
-/* Feature Section */
-.feature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.card-container {
+.hero1 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex: 1;
-    flex-wrap: no-wrap;
-    gap: var(--spacing-2xl);
-    
+    gap: var(--spacing-xl);
+    padding-top: 50px;
 }
 
-.item {
-    background-color: rgb(216, 216, 216);
-    padding: var(--spacing-base) var(--spacing-xl);
-    height: 150px;
-    border-radius: 20px;
+.hero-txt {
+    padding: 0;
+    width: 60%;
+    background-color: #e2dd34;
+}
+
+.mini-about {
+    width: 40%;
 }
